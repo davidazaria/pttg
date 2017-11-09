@@ -26,11 +26,15 @@ For now, the game will include: a landing/home page; a page to collect someone's
 
 ## Phases to completion
 
-Phase 1: Wireframming and story writing. *Due Thursday November 9* 
-Phase 2: Minimum viable product, which will consist of a Real & Fake button with an image. *Due Friday November 10*
-Phase 3: HTML/CSS/Javascript writing. *Due Saturday November 11*
-Phase 4: Feature writing. *Due Sunday November 12*
-Phase 5: Feature writing and bugs. *Due Monday November 13*
+Phase 1: Wireframming and story writing. **Due Thursday November 9** 
+
+Phase 2: Minimum viable product, which will consist of a Real & Fake button with an image. **Due Friday November 10**
+
+Phase 3: HTML/CSS/Javascript writing. **Due Saturday November 11**
+
+Phase 4: Feature writing. **Due Sunday November 12**
+
+Phase 5: Feature writing and bugs. **Due Monday November 13**
 
 **Presentation**
 
