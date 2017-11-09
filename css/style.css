@@ -1,0 +1,27 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+img {
+  height: 50px;
+  width: 70px;
+  margin: 100px 0 100px 0;
+}
+
+.hone {
+font-size: 56px;
+font-weight: bold;
+font-color: black;
+font-family: 'Archivo Black', sans-serif;
+text-align: center;
+margin-top: 200px;
+};
+
+.htwo {
+  background-color: orange;
+  border: 1px solid black;
+  height: 200px;
+  width: 200px;
+};

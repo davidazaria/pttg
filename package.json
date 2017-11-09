@@ -1,0 +1,27 @@
+{
+  "name": "project_1_game",
+  "version": "1.0.0",
+  "description": "This is my PTTG",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.generalassemb.ly:davidazaria/wdi-hamilton-project_1_game.git"
+  },
+  "keywords": [
+    "Twitter",
+    "game",
+    "javascript"
+  ],
+  "author": "David Azaria <azaria.david@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^4.10.0"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  }
+}
