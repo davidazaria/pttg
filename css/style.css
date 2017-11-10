@@ -43,14 +43,16 @@ img {
 
 .row {
   width: 400px;
-  margin: auto;
+  margin-left: 25%;
   padding: 20px;
   text-align: center;
 }
 
 span {
-  position: relative;
-  margin: auto;
+  position: absolute;
+  font-family: 'Archivo Black', sans-serif;
+  margin-left: 50%;
+  width: 100%;
 }
 
 label {
@@ -103,6 +105,10 @@ footer {
   border: none;
 }
 
+.boolean {
+  margin: auto;
+}
+
 #real {
   background-color: #228b22;
   color: white;
@@ -119,4 +125,16 @@ footer {
 
 #fake:hover {
   background-color: crimson;
+}
+
+.progress {
+  margin: 0px 1300px 0px 0px;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 30px;
+}
+
+.tweet {
+  margin-top: 100px;
+  width: 700px;
+  height: 350px;
 }
