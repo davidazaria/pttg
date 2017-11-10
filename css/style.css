@@ -2,26 +2,64 @@ html, body {
   height: 100%;
   width: 100%;
   text-align: center;
+  background-color: #5FA9DD;
 }
 
 img {
-  height: 50px;
-  width: 70px;
-  margin: 100px 0 100px 0;
+  height: 100px;
+  width: 150px;
+  margin: 52px 0 75px -50px;
+  display: inline;
 }
 
-.hone {
-font-size: 56px;
-font-weight: bold;
-font-color: black;
-font-family: 'Archivo Black', sans-serif;
-text-align: center;
-margin-top: 200px;
-};
+h1 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 56px;
+  font-weight: 400;
+  color: black;
+  text-align: center;
+  margin-top: 180px;
+}
 
-.htwo {
-  background-color: orange;
-  border: 1px solid black;
-  height: 200px;
+h2 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 24px;
+  line-height: 200px;
+  margin: auto;
+  margin-top: 0px;
+  color: black;
+  position: absolute;
+  top: 45%;
+  width: 97%;
+}
+
+button {
+  background-color: white;
   width: 200px;
-};
+  height: 70px;
+  margin: 80px 0 0 -70px;
+  font-size: 18px;
+  font-family: 'Archivo Black', sans-serif;
+  display: inline;
+  font-weight: 100;
+  border: none;
+  border-radius: 20%;
+}
+
+.bton:hover {
+  background-color: #FF0000;
+  border: none;
+}
+
+.bton:active {
+  background-color: steelblue;
+  border: none;
+}
+
+footer {
+  margin: 100px 0 0 -1300px;
+  color: #d3d3d3;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+}
