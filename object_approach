@@ -1,0 +1,15 @@
+object_approach
+
+tweets {
+  image_one {
+  id: first
+  class: bar
+  link: url
+  }
+  image_two {
+  foobar
+  }
+  image_three {
+  foobar
+  }
+}

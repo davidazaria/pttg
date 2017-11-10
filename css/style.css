@@ -46,20 +46,38 @@ button {
   border-radius: 20%;
 }
 
-.bton:hover {
-  background-color: #FF0000;
-  border: none;
-}
-
-.bton:active {
-  background-color: steelblue;
-  border: none;
-}
-
 footer {
   margin: 100px 0 0 -1300px;
   color: #d3d3d3;
   font-size: 18px;
   font-weight: 500;
   position: relative;
+}
+
+.bton:hover {
+  background-color: #FF0000;
+  border: none;
+}
+
+.bton:active {
+  background-color: crimson;
+  border: none;
+}
+
+#real {
+  background-color: #228b22;
+  color: white;
+}
+
+#fake {
+  background-color: #FF0000;
+  color: white;
+}
+
+#real:hover{
+  background-color: green;
+}
+
+#fake:hover {
+  background-color: crimson;
 }
