@@ -43,7 +43,6 @@ $(() => {
   });
 
   //look into slider for this
-
   $('.game_bton').click(() => {
     console.log('Welcome to the game page!');
     $('.gamepage').show();
@@ -89,7 +88,7 @@ $(() => {
   $('.game_bton').click(() => {
     console.log('Welcome to the game page!');
     $('.gamepage').show();
-    $('.eigth_tweet').hide();
+    $('.eighth_tweet').hide();
     $('.ninth_tweet').show();
   });
 
@@ -99,5 +98,6 @@ $(() => {
     $('.ninth_tweet').hide();
     $('.tenth_tweet').show();
   });
+
 });
 
