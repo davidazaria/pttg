@@ -40,9 +40,8 @@ img {
   display: inline;
 }
 
-
 .row {
-  width: 400px;
+  width: 550px;
   margin-left: 25%;
   padding: 20px;
   text-align: center;
@@ -106,17 +105,25 @@ footer {
 }
 
 .boolean {
-  margin: auto;
+ padding: 30px 150px;
+}
+
+#real, #fake {
+  display: block;
 }
 
 #real {
+  float: left;
   background-color: #228b22;
   color: white;
+  margin: auto;
 }
 
 #fake {
+  float: right;
   background-color: #FF0000;
   color: white;
+  margin: auto;
 }
 
 #real:hover{
@@ -128,9 +135,10 @@ footer {
 }
 
 .progress {
-  margin: 0px 1300px 0px 0px;
+  margin: 0px 1400px 0px 0px;
   font-family: 'Archivo Black', sans-serif;
-  font-size: 30px;
+  font-weight: 100;
+  font-size: 24px;
 }
 
 .tweet {
