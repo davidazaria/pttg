@@ -135,14 +135,15 @@ footer {
 }
 
 .progress {
-  margin: 0px 1400px 0px 0px;
+  margin: 0 100px 0 0;
   font-family: 'Archivo Black', sans-serif;
   font-weight: 100;
   font-size: 24px;
+  display: inline;
 }
 
 .tweet {
-  margin-top: 100px;
+  margin-top: 50px;
   width: 700px;
   height: 350px;
 }

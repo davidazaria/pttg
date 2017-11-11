@@ -59,10 +59,14 @@ $(() => {
     ];
     let counter = 0;
 
+
     function getImage() {
       $('#tweet').attr('src', tweetArray[counter].url);
       counter++;
       console.log(counter);
+      let trueCounter = counter + 1;
+      let length = tweetArray.length + 1;
+      $('.progress').text('Question' + ' ' + trueCounter + ' ' + 'out of' + ' ' + length);
     }
 
     $('#real').click(getImage);
