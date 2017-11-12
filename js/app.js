@@ -60,10 +60,11 @@ $(() => {
   const clickArray = [];
 
   $('.game_bton').click(function grabclickID() {
-    console.log(this.id);
+    // console.log(this.id);
     for (let i = 0; i < 1; i++) {
       clickArray.push(this.id);
-    } console.log(clickArray);
+    }
+    // console.log(clickArray);
   });
 
   function getImage() {
@@ -71,9 +72,7 @@ $(() => {
     counter++;
     const trueCounter = counter + 1;
     const length = tweetArray.length + 1;
-    const currentScore = counter + 1;
     $('.progress').text(`question ${trueCounter} ` + `out of ${length}`);
-    $('.score').text(`current score is: ${currentScore}`);
 
     const realSelection = document.querySelector('#real').innerHTML;
     const fakeSelection = document.querySelector('#fake').innerHTML;
@@ -88,28 +87,19 @@ $(() => {
     const ninthTweet = tweetArray[7].value;
     const tenthTweet = tweetArray[8].value;
 
-
-    if (clickArray[0] === firstTweet) { console.log('question 1 is correct!'); } else
-    { console.log ('question 1 is incorrect!'); }
-
-    if (clickArray[1] === secondTweet) { console.log('questoin 2 is correct!'); } else
-    { console.log ('questoin 2 is incorrect!'); }
-
-
-         // (clickArray[0] !== firstTweet) { console.log('question 1 is incorrect!'); } else if
-         // (clickArray[1] === secondTweet) { console.log('question 2 is correct!'); } else if
-         // (clickArray[1] !== secondTweet) { console.log('question 2 is incorrect!'); }
-      // if (clickArray[1] === secondTweet) { console.log('question 2 is correct!'); } else { console.log('question 2 is incorrect!'); }
-      // (fakeSelection && counter === 0)
-      // else if (
-      //   fakeSelection && counter === 1) { console.log('question 2 is correct'); } else if (
-      //   realSelection && counter ===1) { console.log('question 2 is incorrect'); }
-      // (fakeSelection && counter === 1) { console.log('question 1 is incorrect'); } else if
-      // (fakeSelection && counter === 2) { console.log('question 2 is correct'); } else if
-      // (realSelection && counter === 2) { console.log('question 2 is incorrect'); }
-    }
+      const score = [];
+      for (let i = 0; i < tweetArray.length; i++) {
+      if (tweetArray[i].id === clickArray[i]) {
+        score.push('good');
+      }
+    }
+    $('.score').text(score.length);
+ }
 
   $('#real').click(getImage);
   $('#fake').click(getImage);
+
+
+
 });
 
