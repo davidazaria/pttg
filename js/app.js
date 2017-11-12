@@ -46,7 +46,6 @@ $(() => {
   // will swap out the img_src for the one hard-coded into the index.HTML file.
 
   function gamePlay() {
-
     const tweetArray = [
       { url: 'http://bit.ly/2zx2LCj', value: false },
       { url: 'http://bit.ly/2zwJe4R', value: false },
@@ -61,16 +60,13 @@ $(() => {
     let counter = 0;
 
     function getImage() {
-
       $('#tweet').attr('src', tweetArray[counter].url);
       counter++;
       const trueCounter = counter + 1;
       const length = tweetArray.length + 1;
-      $('.progress').text(`Question ${trueCounter} ` + `out of ${length}`);
-    }
-
-    function rightTweet (trumpTweets) {
-      //find the right tweet here and if the selection equals the value of the tweet, log one point, else log no points.
+      const currentScore = counter + 1;
+      $('.progress').text(`question ${trueCounter} ` + `out of ${length}`);
+      $('.score').text(`current score is: ${currentScore}`);
     }
 
     $('#real').click(getImage);
@@ -78,5 +74,4 @@ $(() => {
   }
 
   gamePlay();
-
 });

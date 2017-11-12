@@ -33,6 +33,14 @@ h3 {
   display: inline-block;
 }
 
+h4 {
+  font-family: "Helvetica Neue";
+  font-weight: 800;
+  font-size: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
 img {
   height: 100px;
   width: 150px;
@@ -73,6 +81,10 @@ label {
   height: 20px;
 }
 
+.input:focus {
+  background-color: #93E38A;
+}
+
 button {
   background-color: white;
   width: 200px;
@@ -105,7 +117,7 @@ footer {
 }
 
 .boolean {
- padding: 30px;
+ padding: 30px 150px;
 }
 
 #real, #fake {
