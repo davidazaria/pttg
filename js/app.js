@@ -3,22 +3,12 @@ let playerName = null;
 let playerTwitter = null;
 let playerZip = null;
 
-
 $(() => {
   console.log('Ready for Trump Tweets!');
   $('.formpage').hide();
   $('.instructionpage').hide();
   $('.gamepage').hide();
   $('.first_tweet').hide();
-  $('.second_tweet').hide();
-  $('.third_tweet').hide();
-  $('.fourth_tweet').hide();
-  $('.fifth_tweet').hide();
-  $('.sixth_tweet').hide();
-  $('.seventh_tweet').hide();
-  $('.eighth_tweet').hide();
-  $('.ninth_tweet').hide();
-  $('.tenth_tweet').hide();
   $('.finalpage').hide();
 
   // this is my initial log-in function
@@ -46,6 +36,7 @@ $(() => {
     console.log(`Welcome to the game page, ${playerName}!`);
     $('.instructionpage').hide();
     $('.gamepage').show();
+    swapImage();
     $('.first_tweet').show();
   });
 
@@ -67,71 +58,34 @@ $(() => {
   let counter = 0;
 
   const clickArray = [];
+  let clickCount = 0;
 
-  $('.game_bton').click(function grabclickID() {
-    for (let i = 0; i < 1; i++) {
-      clickArray.push(this.id);
+  $('.game_bton').click((e) => {
+    clickArray.push(e.target.id);
+    clickCount++;
+    if (clickCount === 10) {
+      console.log('Thanks for playing!');
+      $('.gamepage').hide();
+      $('.finalpage').show();
     }
   });
-
-  const clickCount = [];
-  $('.game_bton').click(() => {
-    for (let i = 0; i < tweetArray.length; i++) {
-      clickCount.push('foo');
-    }
-    {
-      if (clickCount === 10) {
-        console.log('Thanks for playing!');
-        $('.gamepage').hide();
-        $('.finalpage').show();
-      }
-    }
-  });
-
-  // I want this function here to unshift the tweet
-  // w/ the class first_tweet into the tweetArray with an ID of real
-  // triggering the below logic to mark it correct/incorrect.
-  // function changefirstTweet() {
-
-  //   tweetArray.unshift($('.first_tweet'));
-  //   $('.first_tweet').id('real');
-  // }
 
   function swapImage() {
-    $('#tweet').attr('src', tweetArray[counter].url);
-    counter++;
-    const trueCounter = counter + 1;
-    const lengthNumber = tweetArray.length + 1;
-    $('.progress').text(`question ${trueCounter} ` + `out of ${lengthNumber}`);
+    if (tweetArray.url !== null) {
+      $('#tweet').attr('src', tweetArray[counter].url);
+      $('.progress').text(`question ${counter + 1} ` + `out of ${tweetArray.length}`);
+      counter++;
 
-    const score = [];
-    for (let i = 0; i < tweetArray.length; i++) {
-      if (tweetArray[i].id === clickArray[i]) {
-        score.push('correct');
+      let score = 0;
+      for (let i = 0; i < tweetArray.length; i++) {
+        if (tweetArray[i].id === clickArray[i]) {
+          score++;
+        }
       }
+      $('.score').text(`current score is: ${score}`);
     }
-    $('.score').text(`current score is: ${score.length}`);
   }
 
-  // $('#real').click(changefirstTweet);
-  // $('#fake').click(changefirstTweet);
   $('#real').click(swapImage);
   $('#fake').click(swapImage);
-
-  // this below is deprecated because I don't believe it's within the correct scope
-  // const clickCount = [];
-  // $('.game_bton').click(() => {
-  //   for (let i = 0; i < 10; i++) {
-  //     clickCount.push(1);
-  //   }
-  // });
-
-  // const clickClength = clickCount.length;
-  // $('.game_bton').click(() => {
-  //   if (clickClength === 9) {
-  //     console.log('Thanks for playing!');
-  //     $('.gamepage').hide();
-  //     $('.finalpage').show();
-  //   }
-  // });
 });
