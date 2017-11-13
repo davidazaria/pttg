@@ -1,4 +1,9 @@
 /* eslint-env browser, jquery */
+let playerName = null;
+let playerTwitter = null;
+let playerZip = null;
+
+
 $(() => {
   console.log('Ready for Trump Tweets!');
   $('.formpage').hide();
@@ -28,6 +33,9 @@ $(() => {
 
   $('#btontwo').click(() => {
     console.log('Welcome to the intructions page!');
+    playerName = $('#name').val();
+    playerTwitter = $('#twitterhandle').val();
+    playerZip = $('#zip_code').val();
     $('.formpage').hide();
     $('.instructionpage').show();
   });
@@ -67,19 +75,27 @@ $(() => {
 
   const clickCount = [];
   $('.game_bton').click(() => {
-    for (let i = 0; i < 9; i++) {
-      clickCount.push(1);
+    for (let i = 0; i < tweetArray.length; i++) {
+      clickCount.push('foo');
     }
   });
 
   const clickClength = clickCount.length;
   $('.game_bton').click(() => {
-    if (clickClength === 9) {
+    if (clickClength === 10) {
       console.log('Thanks for playing!');
       $('.gamepage').hide();
       $('.finalpage').show();
     }
   });
+
+  // I want this function here to unshift the tweet
+  // w/ the class first_tweet into the tweetArray with an ID of real
+  // triggering the below logic to mark it correct/incorrect.
+  function changefirstTweet() {
+    tweetArray.unshift($('.first_tweet'));
+    $('.first_tweet').id('real');
+  }
 
   function swapImage() {
     $('#tweet').attr('src', tweetArray[counter].url);
@@ -97,9 +113,12 @@ $(() => {
     $('.score').text(`current score is: ${score.length}`);
   }
 
+  $('#real').click(changefirstTweet);
+  $('#fake').click(changefirstTweet);
   $('#real').click(swapImage);
   $('#fake').click(swapImage);
 
+  // this below is deprecated because I don't believe it's within the correct scope
   // const clickCount = [];
   // $('.game_bton').click(() => {
   //   for (let i = 0; i < 10; i++) {
