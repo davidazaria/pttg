@@ -1,7 +1,14 @@
 /* eslint-env browser, jquery */
+
+//  the below are global variables I will amend with user entries in the forms page
+
 let playerName = null;
 let playerTwitter = null;
 let playerZip = null;
+
+//  the below click function will start the game
+//  what this does in essence is showing certain section classes while hiding others
+//  so for each click based on a button's id, it will hide/show certain sections
 
 $(() => {
   console.log('Ready for Trump Tweets!');
@@ -11,15 +18,13 @@ $(() => {
   $('.first_tweet').hide();
   $('.finalpage').hide();
 
-  // this is my initial log-in function
-
   $('#btonone').click(() => {
     console.log('Welcome to the form page!');
     $('.homepage').hide();
     $('.formpage').show();
   });
 
-  // click function toggling between my different pages
+  //  on this click function, we will be displaying the user's name, twitter handle, and zip code in the console log, proving the user entry into the form worked!
 
   $('#btontwo').click(() => {
     console.log('Welcome to the intructions page!');
@@ -30,8 +35,6 @@ $(() => {
     $('.instructionpage').show();
   });
 
-  // click function toggling between my different pages
-
   $('#btonthree').click(() => {
     console.log(`Welcome to the game page, ${playerName}!`);
     $('.instructionpage').hide();
@@ -40,9 +43,7 @@ $(() => {
     $('.first_tweet').show();
   });
 
-  // the below function will display a subsequent tweet when a click event occurs
-  // the tweets are stored in an array.
-  // will swap out the img_src for the one hard-coded into the index.HTML file.
+  //  the below is the core of the game functionality, starting with an array of tweets
 
   const tweetArray = [
     { url: 'http://bit.ly/2zxNoHQ', value: false, id: 'real' },
@@ -55,8 +56,11 @@ $(() => {
     { url: 'http://bit.ly/2iKcriT', value: false, id: 'fake' },
     { url: 'http://bit.ly/2mbrcjH', value: false, id: 'fake' },
     { url: 'http://bit.ly/2zxeyyr', value: true, id: 'real' }];
-  let counter = 0;
 
+  //  the above array has a url of the tweet image, a boolean t/f value, and an id
+  //  the tweet id here will be used to match against a button's id that the user selected, determining whether the selection was correct or incorrect
+
+  let counter = 0;
   const clickArray = [];
   let clickCount = 0;
 
@@ -83,7 +87,7 @@ $(() => {
         }
       }
       $('.score').text(`current score is: ${score}`);
-      $('#scored').text(`your score was ${score} out of ${tweetArray.length}! thanks for playing!`);
+      $('#scored').text(`your score was ${score} out of ${tweetArray.length}! thanks for playing, ${playerName}!`);
     }
   }
 
