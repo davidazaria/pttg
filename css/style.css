@@ -5,6 +5,12 @@ html, body {
   background-color: #5FA9DD;
 }
 
+@media screen and (max-width: 800px) {
+    h1 {
+        background-color: red;
+    }
+}
+
 h1 {
   font-family: 'Archivo Black', sans-serif;
   font-size: 52px;
@@ -93,7 +99,7 @@ button {
 }
 
 footer {
-  margin: 100px 0 0 -1300px;
+  margin: 80px 0 0 -1300px;
   color: #d3d3d3;
   font-size: 18px;
   font-weight: 500;
