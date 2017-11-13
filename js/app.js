@@ -60,46 +60,42 @@ $(() => {
   const clickArray = [];
 
   $('.game_bton').click(function grabclickID() {
-    // console.log(this.id);
     for (let i = 0; i < 1; i++) {
       clickArray.push(this.id);
     }
-    // console.log(clickArray);
   });
 
-  function getImage() {
+  function swapImage() {
     $('#tweet').attr('src', tweetArray[counter].url);
     counter++;
     const trueCounter = counter + 1;
-    const length = tweetArray.length + 1;
-    $('.progress').text(`question ${trueCounter} ` + `out of ${length}`);
+    const lengthNumber = tweetArray.length + 1;
+    $('.progress').text(`question ${trueCounter} ` + `out of ${lengthNumber}`);
 
-    const realSelection = document.querySelector('#real').innerHTML;
-    const fakeSelection = document.querySelector('#fake').innerHTML;
-    const firstTweet = 'real';
-    const secondTweet = tweetArray[0].value;
-    const thirdTweet = tweetArray[1].value;
-    const fourthTweet = tweetArray[2].value;
-    const fifthTweet = tweetArray[3].value;
-    const sixthTweet = tweetArray[4].value;
-    const seventhTweet = tweetArray[5].value;
-    const eighthTweet = tweetArray[6].value;
-    const ninthTweet = tweetArray[7].value;
-    const tenthTweet = tweetArray[8].value;
+    const score = [];
+    for (let i = 0; i < tweetArray.length; i++) {
+      if (tweetArray[i].id === clickArray[i]) {
+        score.push('correct');
+      }
+    }
+    $('.score').text(`current score is: ${score.length}`);
+  }
 
-      const score = [];
-      for (let i = 0; i < tweetArray.length; i++) {
-      if (tweetArray[i].id === clickArray[i]) {
-        score.push('good');
-      }
-    }
-    $('.score').text(score.length);
- }
+  $('#real').click(swapImage);
+  $('#fake').click(swapImage);
 
-  $('#real').click(getImage);
-  $('#fake').click(getImage);
+  const clickCount = [];
+  $('.game_bton').click(() => {
+    for (let i = 0; i < 9; i++) {
+      clickCount.push('string');
+    }
+  });
 
-
-
+  $('.game_bton').click(() => {
+    if (clickCount === 10) {
+      console.log('Thanks for playing!');
+      $('.gamepage').hide();
+      $('.finalpage').show();
+    }
+  });
 });
-

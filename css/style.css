@@ -33,14 +33,6 @@ h3 {
   display: inline-block;
 }
 
-h4 {
-  font-family: "Helvetica Neue";
-  font-weight: 800;
-  font-size: 20px;
-  text-align: center;
-  display: inline-block;
-}
-
 img {
   height: 100px;
   width: 150px;
@@ -146,7 +138,7 @@ footer {
   background-color: crimson;
 }
 
-.progress {
+.progress, .score {
   margin: 0 100px 0 0;
   font-family: 'Archivo Black', sans-serif;
   font-weight: 100;
