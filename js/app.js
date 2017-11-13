@@ -25,7 +25,7 @@ $(() => {
     $('.homepage').hide();
     $('.formpage').show();
 
-    // form validation
+    // form validation, which must have entries in all three fields
     if ($('.row').val() === '') { $('#btontwo').attr('disabled', true); }
     $('.row').keyup(() => {
       if (($('#name').val() !== '') &&
@@ -55,7 +55,7 @@ $(() => {
   //  the below is the core of the game functionality, starting with an array of tweets
 
   const tweetArray = [
-    { url: 'http://bit.ly/2zxNoHQ', value: false, id: 'real' },
+    { url: 'http://bit.ly/2zxNoHQ', value: true, id: 'real' },
     { url: 'http://bit.ly/2zx2LCj', value: false, id: 'fake' },
     { url: 'http://bit.ly/2zwJe4R', value: false, id: 'fake' },
     { url: 'http://bit.ly/2m9LVnS', value: true, id: 'real' },
