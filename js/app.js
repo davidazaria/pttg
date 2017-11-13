@@ -65,6 +65,22 @@ $(() => {
     }
   });
 
+  const clickCount = [];
+  $('.game_bton').click(() => {
+    for (let i = 0; i < 9; i++) {
+      clickCount.push(1);
+    }
+  });
+
+  const clickClength = clickCount.length;
+  $('.game_bton').click(() => {
+    if (clickClength === 9) {
+      console.log('Thanks for playing!');
+      $('.gamepage').hide();
+      $('.finalpage').show();
+    }
+  });
+
   function swapImage() {
     $('#tweet').attr('src', tweetArray[counter].url);
     counter++;
@@ -84,18 +100,19 @@ $(() => {
   $('#real').click(swapImage);
   $('#fake').click(swapImage);
 
-  const clickCount = [];
-  $('.game_bton').click(() => {
-    for (let i = 0; i < 9; i++) {
-      clickCount.push('string');
-    }
-  });
+  // const clickCount = [];
+  // $('.game_bton').click(() => {
+  //   for (let i = 0; i < 10; i++) {
+  //     clickCount.push(1);
+  //   }
+  // });
 
-  $('.game_bton').click(() => {
-    if (clickCount === 10) {
-      console.log('Thanks for playing!');
-      $('.gamepage').hide();
-      $('.finalpage').show();
-    }
-  });
+  // const clickClength = clickCount.length;
+  // $('.game_bton').click(() => {
+  //   if (clickClength === 9) {
+  //     console.log('Thanks for playing!');
+  //     $('.gamepage').hide();
+  //     $('.finalpage').show();
+  //   }
+  // });
 });
