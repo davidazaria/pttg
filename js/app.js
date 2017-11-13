@@ -43,7 +43,7 @@ $(() => {
   // click function toggling between my different pages
 
   $('#btonthree').click(() => {
-    console.log('Welcome to the game page!');
+    console.log(`Welcome to the game page, ${playerName}!`);
     $('.instructionpage').hide();
     $('.gamepage').show();
     $('.first_tweet').show();
@@ -54,6 +54,7 @@ $(() => {
   // will swap out the img_src for the one hard-coded into the index.HTML file.
 
   const tweetArray = [
+    { url: 'http://bit.ly/2zxNoHQ', value: false, id: 'real' },
     { url: 'http://bit.ly/2zx2LCj', value: false, id: 'fake' },
     { url: 'http://bit.ly/2zwJe4R', value: false, id: 'fake' },
     { url: 'http://bit.ly/2m9LVnS', value: true, id: 'real' },
@@ -78,24 +79,23 @@ $(() => {
     for (let i = 0; i < tweetArray.length; i++) {
       clickCount.push('foo');
     }
-  });
-
-  const clickClength = clickCount.length;
-  $('.game_bton').click(() => {
-    if (clickClength === 10) {
-      console.log('Thanks for playing!');
-      $('.gamepage').hide();
-      $('.finalpage').show();
+    {
+      if (clickCount === 10) {
+        console.log('Thanks for playing!');
+        $('.gamepage').hide();
+        $('.finalpage').show();
+      }
     }
   });
 
   // I want this function here to unshift the tweet
   // w/ the class first_tweet into the tweetArray with an ID of real
   // triggering the below logic to mark it correct/incorrect.
-  function changefirstTweet() {
-    tweetArray.unshift($('.first_tweet'));
-    $('.first_tweet').id('real');
-  }
+  // function changefirstTweet() {
+
+  //   tweetArray.unshift($('.first_tweet'));
+  //   $('.first_tweet').id('real');
+  // }
 
   function swapImage() {
     $('#tweet').attr('src', tweetArray[counter].url);
@@ -113,8 +113,8 @@ $(() => {
     $('.score').text(`current score is: ${score.length}`);
   }
 
-  $('#real').click(changefirstTweet);
-  $('#fake').click(changefirstTweet);
+  // $('#real').click(changefirstTweet);
+  // $('#fake').click(changefirstTweet);
   $('#real').click(swapImage);
   $('#fake').click(swapImage);
 

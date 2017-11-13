@@ -28,6 +28,8 @@ h2 {
 
 h3 {
   font-family: "Helvetica Neue";
+  font-size: 18px;
+  margin-top: -200px;
   font-weight: 400;
   text-align: center;
   display: inline-block;
