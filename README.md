@@ -1,4 +1,4 @@
-*** David Azaria / November 2017 ***
+** David Azaria / November 2017 **
 
 # President Trump Twitter Game ("PTTG") Proposal
 
@@ -41,4 +41,7 @@ Phase 5: Feature writing and bugs. **Due Monday November 13**
 ## Links and Resources
 
 Here is a link to a similar - yet different - quiz on Sporcle: https://www.sporcle.com/games/zigga/trump-tweets
-And here is a link to a more robust Trump Tweet producer: https://filiph.github.io/markov/
+
+And here is a link to a more robust Trump Tweet producer using Markov chains: https://filiph.github.io/markov/
+
+I tackled a form validation feature with the help of MDN: https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation
