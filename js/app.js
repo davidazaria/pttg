@@ -24,7 +24,7 @@ $(() => {
     $('.formpage').show();
   });
 
-  //  on this click function, we will be displaying the user's name, twitter handle, and zip code in the console log, proving the user entry into the form worked!
+  //  on this click function, we will be storing the user's name, twitter handle, and zip code into the DOM, and below will we console logging it to prove the user entry into the form worked!
 
   $('#btontwo').click(() => {
     console.log('Welcome to the intructions page!');
@@ -39,7 +39,7 @@ $(() => {
     console.log(`Welcome to the game page, ${playerName}!`);
     $('.instructionpage').hide();
     $('.gamepage').show();
-    swapImage();
+    gamePlay();
     $('.first_tweet').show();
   });
 
@@ -57,28 +57,43 @@ $(() => {
     { url: 'http://bit.ly/2mbrcjH', value: false, id: 'fake' },
     { url: 'http://bit.ly/2zxeyyr', value: true, id: 'real' }];
 
-  //  the above array has a url of the tweet image, a boolean t/f value, and an id
+  //  the above array has a url of the tweet image, a boolean t/f value which I would like to use in future iterations, and an id [see below]
   //  the tweet id here will be used to match against a button's id that the user selected, determining whether the selection was correct or incorrect
 
-  let counter = 0;
+  //  this will count the nth number of tweet I am currently playing and displaying
+  let tweetCounter = 0;
+
+  //  this is an empty array I will push in the id of the button I am playing which I will then use to match against the id of the tweet
   const clickArray = [];
+
+  //  starting at 0, which I will increment up for every click, and then kill the game once I've hit the 10th click
   let clickCount = 0;
+
+
+  //  in this click event on the class of game button, which represents both options the user could click to log a response, I will be grabbing and manipulating a series of information
+  //  for one, I will be grabbing the id of the button to match against the id of the tweet for logging purposes
 
   $('.game_bton').click((e) => {
     clickArray.push(e.target.id);
     clickCount++;
-    if (clickCount === 10) {
+    //  in addition, given the number of clicks I am on, I will also trigger the eventual winning event to finalize the game. ideally i would like to move this function elsewhere along with the click(gamePlay) functionality
+    if (clickCount === 9) {
       console.log('Thanks for playing!');
       $('.gamepage').hide();
       $('.finalpage').show();
     }
   });
 
-  function swapImage() {
-    if (tweetArray.url !== 'undefined') {
-      $('#tweet').attr('src', tweetArray[counter].url);
-      $('.progress').text(`question ${counter + 1} ` + `out of ${tweetArray.length}`);
-      counter++;
+  //  this is a rather bloated function, which does the following:
+
+  function gamePlay(event) {
+    if ('url' in tweetArray[tweetCounter]) { //  guards against going too far in the number of clicks so that there is no log of a click against an item in an array that does not exist
+      $('#tweet').attr('src', tweetArray[tweetCounter].url); // swaps the image of a tweet based on the tweetCounter position
+      $('.progress').text(`question ${tweetCounter + 1} ` + `out of ${tweetArray.length}`);
+      tweetCounter++; // adds to the DOM the current position of the game the user is in
+
+      //  within the same function bloated function in need of a refactoring, as i loop through the length of my array, i stash the matches of the id's of the tweet and click's id
+      //  if there is a match, the we increment the variable for score with a point
 
       let score = 0;
       for (let i = 0; i < tweetArray.length; i++) {
@@ -86,11 +101,12 @@ $(() => {
           score++;
         }
       }
-      $('.score').text(`current score is: ${score}`);
-      $('#scored').text(`your score was ${score} out of ${tweetArray.length}! thanks for playing, ${playerName}!`);
+      $('.score').text(`current score is: ${score}`); //  additionally, we throw the current score on the game page
+
+      $('#scored').text(`your score was ${score} out of ${tweetArray.length}! thanks for playing, ${playerName}!`); //  and finally we know to update the final page with the score's final tally
     }
   }
-
-  $('#real').click(swapImage);
-  $('#fake').click(swapImage);
+  //  and here is where we are calling the above function to trigger the aforementioned actions based on the button id found here
+  $('#real').click(gamePlay);
+  $('#fake').click(gamePlay);
 });
