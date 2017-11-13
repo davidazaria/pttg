@@ -71,7 +71,7 @@ $(() => {
   });
 
   function swapImage() {
-    if (tweetArray.url !== null) {
+    if (tweetArray.url !== 'undefined') {
       $('#tweet').attr('src', tweetArray[counter].url);
       $('.progress').text(`question ${counter + 1} ` + `out of ${tweetArray.length}`);
       counter++;
@@ -83,6 +83,7 @@ $(() => {
         }
       }
       $('.score').text(`current score is: ${score}`);
+      $('#scored').text(`your score was ${score} out of ${tweetArray.length}! thanks for playing!`);
     }
   }
 
