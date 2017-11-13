@@ -8,8 +8,9 @@ let playerZip = null;
 
 //  the below click function will hide all the section classes that are not yet in action until, if ever, we get to it based on the corresponding click events
 //  this was my low-brow way of handling multiple html pages by showing/hiding different section classes. this was excellent practice for click event "toggles"
-// line 27 was originally a "won't do" feature that i decided to tackle to give me some more jQuery beefiness in what was an otherwise straightforward game
-// what line 27 does is disable my submit button unless i had entered information in all three of my form fields. not a bad feature all things considered.
+//  line 29 was originally a "won't do" feature that i decided to tackle to give me some more jQuery beefiness in what was an otherwise straightforward game
+//  what line 29 does is disable my submit button unless i had entered information in all three of my form fields. not a bad feature all things considered.
+//  for the #btontwo click starting at line 38, there I reassign some DOM elements with user inputs for name, twitter handle, and zip code, for which only name i will use later on in the game.
 
 $(() => {
   console.log('Ready for Trump Tweets!');
@@ -24,6 +25,7 @@ $(() => {
     $('.homepage').hide();
     $('.formpage').show();
 
+    // form validation
     if ($('.row').val() === '') { $('#btontwo').attr('disabled', true); }
     $('.row').keyup(() => {
       if (($('#name').val() !== '') &&
