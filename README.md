@@ -16,25 +16,25 @@ With that, give it a go. Run through ten Tweets and see if you can spot which ar
 
 ## My wireframe
 
-Will need to upload my wireframe here. 
+Wireframe can be found in the project repo, file labeled "Donald Trump - Twitter Project 1.pdf".
 
 ## My initial thoughts on game structure
 
-For now, the game will include: a landing/home page; a page to collect someone's information; a brief(er) description of how the game works; a series of Tweets to click through; and finally a score/closing page. Some challenges might be: linking a series of HTML pages together; CSS'ing the heck out of the page to appear somewhat decent; collecting progress and the display of correct Real and Fake; and not getting too tripped up in the code. 
+In the initial concept phase, the game included: a landing/home page; a page to collect someone's information; a brief(er) description of how the game works; a series of Tweets to click through; and finally a score/closing page. Some challenges were initially thought to be: linking a series of HTML pages together; CSS'ing the heck out of the page to appear somewhat decent; collecting progress and the display of correct Real and Fake; and not getting too tripped up in the code. 
 
 ## Phases to completion
 
-Phase 1: Wireframming and story writing. **Due Thursday November 9** 
+Phase 1: Wireframming and story writing. **Due Thursday November 9** **COMPLETE**
 
-Phase 2: Minimum viable product, which will consist of a Real & Fake button with an image. **Due Friday November 10**
+Phase 2: Minimum viable product, which will consist of a Real & Fake button with an image. **Due Friday November 10** **COMPLETE**
 
-Phase 3: HTML/CSS/Javascript writing. **Due Saturday November 11**
+Phase 3: HTML/CSS/Javascript writing. **Due Saturday November 11** **COMPLETE**
 
-Phase 4: Feature writing. **Due Sunday November 12**
+Phase 4: Feature writing. **Due Sunday November 12** **COMPLETE**
 
-Phase 5: Feature writing and bugs. **Due Monday November 13**
+Phase 5: Feature writing and bugs. **Due Monday November 13** **COMPLETE**
 
-**Presentation**
+**Presentation** **Tuesday November 14**
 
 ## Links and Resources
 
