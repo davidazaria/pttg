@@ -1,4 +1,4 @@
-# President Trump Twitter Game ("PTTG") Proposal - David Azaria / November 2017
+# President Trump Twitter Game ("PTTG") - David Azaria / November 2017
 
 ## What is PTTG?
 
