@@ -36,7 +36,7 @@ $(() => {
   });
 
   $('#btontwo').click(() => {
-    console.log('Welcome to the intructions page!');
+    console.log('Welcome to the instructions page!');
     playerName = $('#name').val();
     playerTwitter = $('#twitterhandle').val();
     playerZip = $('#zip_code').val();
@@ -61,7 +61,7 @@ $(() => {
     { url: 'http://bit.ly/2m9LVnS', value: true, id: 'real' },
     { url: 'http://bit.ly/2yrdI57', value: true, id: 'real' },
     { url: 'http://bit.ly/2jfkWqa', value: false, id: 'fake' },
-    { url: 'http://bit.ly/2AwxihD', value: true, id: 'real' },
+    { url: 'http://bit .ly/2AwxihD', value: true, id: 'real' },
     { url: 'http://bit.ly/2iKcriT', value: false, id: 'fake' },
     { url: 'http://bit.ly/2mbrcjH', value: false, id: 'fake' },
     { url: 'http://bit.ly/2zxeyyr', value: true, id: 'real' }];
