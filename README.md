@@ -22,6 +22,14 @@ Wireframe can be found in the project repo, file labeled "Donald Trump - Twitter
 
 In the initial concept phase, the game included: a landing/home page; a page to collect someone's information; a brief(er) description of how the game works; a series of Tweets to click through; and finally a score/closing page. Some challenges were initially thought to be: linking a series of HTML pages together; CSS'ing the heck out of the page to appear somewhat decent; collecting progress and the display of correct Real and Fake; and not getting too tripped up in the code. 
 
+## How it works
+
+In short, the game is rather boilerplate HTML, CSS, JavaScript with the inclusion of jQuery to manipulate not only my DOM but the gameplay itself. Almost every piece of functionality I wanted to set out to complete was completed save for the unnecessary stitching of multiple HTML files; I used section classes and .hide's and.show's to toggle between div's based on user clicks. This presents a more seamless and code-friendly environment, in my opinion.
+
+Otherwise, the basic breakdown is that of a homescreen with an embedded .gif; a form page that must take in information in every field; a brief primer on the game itself; and then the click throughs on the game followed by a score page at the end. 
+
+The mechanics of the array set up, click functions/event listeners, and other scoring functions are in need of a refactor to better accommodate future iterations on the game -- something I intend to do. Otherwise, I'm happy to report the game works, is fun (try it out!), and can be used as a fun launchpad for future installations on the series!
+
 ## Phases to completion
 
 Phase 1: Wireframming and story writing. **Due Thursday November 9** **COMPLETE**
